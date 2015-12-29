@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+            <EditText
+                android:id="@+id/lemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+            <requestFocus />
+
+            <TextView
+                android:id="@+id/lpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+            <EditText
+                android:id="@+id/lepass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+
+                <Button
+                    android:id="@+id/signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SignUp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/newregister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Register?? Sign Up here"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+
