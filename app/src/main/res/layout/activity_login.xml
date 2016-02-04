@@ -3,10 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <LinearLayout
 
@@ -26,7 +22,7 @@
 
 
             <EditText
-                android:id="@+id/lemail"
+                android:id="@+id/editemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -45,7 +41,7 @@
 
 
             <EditText
-                android:id="@+id/lepass"
+                android:id="@+id/editpass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -73,7 +69,7 @@
                 android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
-    </ScrollView>
+
 </LinearLayout>
 
 

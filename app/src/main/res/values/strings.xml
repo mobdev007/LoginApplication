@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">LoginApplication</string>
     <string name="signup_title">Sign Up</string>
+    <string name="Details_title">User Details</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -16,5 +17,5 @@
         completions."
     </string>
     <string name="title_activity_1">Activity1</string>
-    <string name="logout_title">logout</string>
+    <string name="logout_title">List Places</string>
 </resources>

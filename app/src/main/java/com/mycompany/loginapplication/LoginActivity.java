@@ -3,7 +3,9 @@ package com.mycompany.loginapplication;
         import android.animation.Animator;
         import android.animation.AnimatorListenerAdapter;
         import android.annotation.TargetApi;
+        import android.app.Activity;
         import android.content.Intent;
+        import android.content.SharedPreferences;
         import android.content.pm.PackageManager;
         import android.support.annotation.NonNull;
         import android.support.design.widget.Snackbar;
@@ -38,29 +40,30 @@ package com.mycompany.loginapplication;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity implements OnClickListener {
-    Button signup;
-    EditText lemail, lepass;
-    TextView newregister;
+public class LoginActivity extends Activity implements OnClickListener {
+    Button sup;
+    EditText eemail, epass;
+    TextView newreg;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        lemail = (EditText) findViewById(R.id.lemail);
-        lepass = (EditText) findViewById(R.id.lepass);
-        signup = (Button) findViewById(R.id.signup);
-        newregister =(TextView)findViewById(R.id.newregister);
+        eemail = (EditText) findViewById(R.id.editemail);
+        epass = (EditText) findViewById(R.id.editpass);
+        sup = (Button) findViewById(R.id.signup);
+        newreg =(TextView)findViewById(R.id.newregister);
 
-        signup.setOnClickListener(this);
-        newregister.setOnClickListener(this);
+        sup.setOnClickListener(this);
+        newreg.setOnClickListener(this);
     }
 //    private static final String[] DUMMY_CREDENTIALS = new String[]{
-//            "kiran@:pinky", "pinky@:kiran"
+//            "k@:pinky", "pinky@:k"
 //    };
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.signup:
+
                 Intent in = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(in);
 

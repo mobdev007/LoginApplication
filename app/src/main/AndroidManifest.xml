@@ -3,9 +3,6 @@
     package="com.mycompany.loginapplication">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +25,7 @@
         </activity>
         <activity
             android:name=".HomeActivity"
-            android:label="@string/logout_title">
+            android:label="@string/Details_title">
         </activity>
     </application>
 
