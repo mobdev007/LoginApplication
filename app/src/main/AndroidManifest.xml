@@ -27,6 +27,7 @@
             android:name=".HomeActivity"
             android:label="@string/Details_title">
         </activity>
+
     </application>
 
 </manifest>
