@@ -9,15 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by mine on 12/17/2015.
  */
 public class RegistrationActivity extends Activity implements View.OnClickListener {
-
     Button submit;
-    EditText efn, eln, reun, repas, ecpas, eeml;
+    EditText efn, eln, reun, repas, eeml;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +26,6 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
         eln = (EditText) findViewById(R.id.elname);
         reun = (EditText) findViewById(R.id.reuname);
         repas = (EditText) findViewById(R.id.repass);
-        ecpas = (EditText) findViewById(R.id.ecpass);
         eeml = (EditText) findViewById(R.id.eemail);
 
         submit = (Button) findViewById(R.id.submit);
@@ -38,38 +35,22 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
 //        cancel.setOnClickListener(this);
 
     }
-
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.submit:
 
-                SharedPreferences sp = getSharedPreferences("prefs", 0);
+                SharedPreferences sp = getSharedPreferences("prefs",0);
                 SharedPreferences.Editor editor = sp.edit();
                 editor.putString("fastname", efn.getText().toString());
-                editor.putString("lastname", eln.getText().toString());
-                editor.putString("username", reun.getText().toString());
-                editor.putString("email", eeml.getText().toString());
-                editor.putString("pass", repas.getText().toString());
+                editor.putString("lastname",eln.getText().toString());
+                editor.putString("username",reun.getText().toString());
+                editor.putString("email",eeml.getText().toString());
+
                 editor.commit();
-                //match the password and conform password
-                String pas = repas.getText().toString();
-                String cpas = ecpas.getText().toString();
 
-                if (!pas.equals(cpas)) {
-                    Toast.makeText(this, "Password not match", Toast.LENGTH_SHORT).show();
-
-                    Intent intent = new Intent(RegistrationActivity.this, RegistrationActivity.class);
-                    startActivity(intent);
-                }
-                else {
-
-                    if (pas.equals((cpas))){
-                    Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);
-                    startActivity(i);
-                }
+                Intent i = new Intent(RegistrationActivity.this, LoginActivity.class);
+                startActivity(i);
+                break;
         }
     }
 }
-}
-
-
