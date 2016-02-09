@@ -29,6 +29,7 @@ public class HomeActivity extends Activity implements View.OnClickListener {
 
         lg = (Button)findViewById(R.id.logout);
 
+        //user details will be shown here
         SharedPreferences sp = getSharedPreferences("prefs",0);
         String fnm = sp.getString("fastname", "enter first name");
         String lnm = sp.getString("lastname","enter last name");
